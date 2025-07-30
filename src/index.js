@@ -29,7 +29,7 @@ export default (async function () {
         const result = Module.UTF16ToString(returnStringPtr);
         Module._free(returnStringPtr);
 
-        return result;
+        return result.replace(/ڵﺎ/g, 'ڵا');
     }
 
     function mergeParagraphLineBreakPoints(lineBreakPoints, paragraphCount) {

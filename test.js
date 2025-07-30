@@ -11,6 +11,10 @@ test('applyArabicShaping', () => {
     );
 });
 
+test('Kurdish ligature', () => {
+    assert.equal(applyArabicShaping('ڵا'), 'ڵا');
+});
+
 test('Mixed numbers (left-to-right) with letters (right-to-left)', () => {
     assert.deepEqual(
         processBidirectionalText(applyArabicShaping('سلام۳۹'), []),
